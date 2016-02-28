@@ -1,0 +1,50 @@
+﻿@model Web.UI.Models.BuscarEventoViewModel
+
+<h2>Buscar Eventos</h2>
+@* Forma 1 usando Html puro *@
+
+@using (Html.BeginForm("Buscar","Buscar",
+    null,FormMethod.Post, new { @class = "form-inline" }))
+{
+    <div class="form-group col-xs-6 col-sm-10">
+         <input type="text" placeholder="Evento a buscar..."
+               name="Busqueda" value=@Model.Busqueda class="form-control"/>
+    </div>
+
+    <input type="submit" value="Buscar" class="btn btn-success"/>
+}
+
+
+@* Esto es solo el primer paso *@
+@if (Model.Eventos.Count() > 0)
+{
+    <h3>Eventos Encontrados</h3>
+    <ul>
+        @foreach(var evento in Model.Eventos)
+        {
+            <li>
+                <div class="well">
+                    <h2 class="span6">@evento.Nombre</h2>
+                    <span>@evento.Fecha</span>
+                    <div class="row">
+                        <span><strong>Donde:</strong></span>
+                        <span>@evento.Lugar</span>
+                    </div>
+                    <div class="row">
+                        <span>@evento.Descripcion</span>
+                    </div>
+                    <div class="row">
+                        <span>Notas:</span>
+                        <span>@evento.Nota</span>
+                    </div>
+
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+<h3>No se encontraron eventos...</h3>
+}
+
