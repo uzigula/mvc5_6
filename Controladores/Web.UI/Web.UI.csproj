@@ -181,6 +181,8 @@
     <Content Include="Views\Buscar\_Index.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Buscar\Index.cshtml" />
+    <Content Include="Views\Buscar\_Eventos.cshtml" />
+    <Content Include="Views\Buscar\_Eventos2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

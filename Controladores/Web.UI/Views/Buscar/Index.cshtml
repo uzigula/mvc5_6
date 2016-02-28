@@ -19,29 +19,7 @@
 @if (Model.Eventos.Count() > 0)
 {
     <h3>Eventos Encontrados</h3>
-    <ul>
-        @foreach(var evento in Model.Eventos)
-        {
-            <li>
-                <div class="well">
-                    <h2 class="span6">@evento.Nombre</h2>
-                    <span>@evento.Fecha</span>
-                    <div class="row">
-                        <span><strong>Donde:</strong></span>
-                        <span>@evento.Lugar</span>
-                    </div>
-                    <div class="row">
-                        <span>@evento.Descripcion</span>
-                    </div>
-                    <div class="row">
-                        <span>Notas:</span>
-                        <span>@evento.Nota</span>
-                    </div>
-
-                </div>
-            </li>
-        }
-    </ul>
+   @Html.Partial("_Eventos",Model.Eventos)
 }
 else
 {

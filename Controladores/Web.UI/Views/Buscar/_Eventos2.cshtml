@@ -1,0 +1,17 @@
+﻿<!-- una forma mostrar lista de eventos-->
+@model Web.UI.Models.EventosListaViewModel
+<div class="well">
+    <h2 class="span6">@Model.Nombre</h2>
+    <span>@Model.Fecha</span>
+    <div class="row">
+        <span><strong>Donde:</strong></span>
+        <span>@Model.Lugar</span>
+    </div>
+    <div class="row">
+        <span>@Model.Descripcion</span>
+    </div>
+    <div class="row">
+        <span>Notas:</span>
+        <span>@Model.Nota</span>
+    </div>
+</div>

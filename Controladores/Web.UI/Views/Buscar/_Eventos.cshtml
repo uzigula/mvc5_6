@@ -1,0 +1,12 @@
+﻿<!-- una forma mostrar lista de eventos-->
+@model IEnumerable<Web.UI.Models.EventosListaViewModel>
+
+<ul>
+    @foreach (var evento in Model)
+    {
+        <li>
+            @Html.Partial("_Eventos2", evento)
+        </li>
+    }
+</ul>
+
