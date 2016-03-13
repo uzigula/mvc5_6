@@ -28,7 +28,21 @@
                     <li>@Html.ActionLink("Nvo Empleado", "Registrar", "Empleado")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
+
+                @using (Html.BeginForm("CambiarCultura", "Home"))
+                {
+                    @Html.DropDownList("culturaSeleccionada",
+                        new SelectList(new []
+                        {
+                            new { value="en", text=Seguridad.Recursos.General.Ingles},
+                            new { value="es",text=Seguridad.Recursos.General.Espanol}
+                        }, "value", "text", Session["ActualCultura"]), 
+                        new {onchange="this.form.submit();"}
+                        )
+                }
             </div>
+            
+
         </div>
     </div>
     <div class="container body-content">

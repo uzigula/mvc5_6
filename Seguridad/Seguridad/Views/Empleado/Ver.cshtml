@@ -1,0 +1,56 @@
+﻿@model Seguridad.Models.EmpleadoRegistrar
+
+@{
+    ViewBag.Title = "Ver";
+}
+<br/>
+<div>
+    <h4>@Seguridad.Recursos.Empleado.Ver_Titulo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sueldo)
+        </dt>
+
+        <dd>
+            @string.Format("{0:C}", Model.Sueldo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descuentos)
+        </dt>
+
+        <dd>
+            @string.Format("{0:C}", Model.Descuentos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

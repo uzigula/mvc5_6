@@ -1,13 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 
 namespace Seguridad.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+
+        public ActionResult CambiarCultura(string culturaSeleccionada)
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(culturaSeleccionada);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(culturaSeleccionada);
+            Session["ActualCultura"] = culturaSeleccionada;
+            return View("Index");
+        }
         public ActionResult Index()
         {
             return View();

@@ -5,6 +5,7 @@ namespace Seguridad.Models
 {
     public class EmpleadoRegistrar
     {
+        [Display( Name ="Empleado_Nombre", ResourceType= typeof(Recursos.Empleado))]
         [Required]
         public string Nombre { get; set; }
 
