@@ -1,0 +1,72 @@
+﻿@model IEnumerable<VirtualOffice.Web.Areas.Administrativa.Models.ClientesListaViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicios)
+            </th>
+            <th>
+                Monto contratado<br />(S/. con IGV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AfiliadoEn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Servicios)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MontoSuscripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AfiliadoEn)
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <button title="Acción" class="btn dropdown-toggle btn-xs" data-toggle="dropdown">
+                            <span><i class="glyphicon glyphicon-cog"></i><span class="caret"></span> </span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href=@Url.Action("Editar", "Clientes", new {  id = item.ClienteId })><i class="glyphicon glyphicon-edit"></i>&nbsp;Editar</a>
+                            </li>
+                            <li>
+                                @Html.Raw(
+                                @Ajax.ActionLink("[replacetext]", "RenovarSuscripcion", "Clientes", new {id = item.ClienteId, area = "Administrativa"},
+                                    new AjaxOptions
+                                    {
+                                        HttpMethod = "Get",
+                                        InsertionMode = InsertionMode.Replace,
+                                        UpdateTargetId = "RenuevaModalFormContainer"
+                                    }, new
+                                    {
+                                        // @class = "glyphicon glyphicon-calendar",
+                                        data_toggle = "modal",
+                                        data_target = "#RenuevaModalFormContainer"
+                                    }).ToHtmlString()
+                                    .Replace("[replacetext]", "<i class=\"glyphicon glyphicon-calendar\"></i>&nbsp;Suscribir"))
+                                 </li>
+                            <li>
+                                <a href=@Url.Action("VerSuscripciones", "Clientes", new { area = "Administrativa", id = item.ClienteId })><i class="glyphicon glyphicon-eye-open"></i>&nbsp;Ver suscripciones</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

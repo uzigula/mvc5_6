@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VirtualOffice.Repositorios</RootNamespace>
+    <AssemblyName>VirtualOffice.Repositorios</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <OutputPath>bin\UAT\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FileHelpers, Version=3.1.5.0, Culture=neutral, PublicKeyToken=3e0c08d59cc3d657, processorArchitecture=MSIL">
+      <HintPath>..\packages\FileHelpers.3.1.5\lib\net45\FileHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADO\IDatabaseContext.cs" />
+    <Compile Include="ADO\IDbRepository.cs" />
+    <Compile Include="ADO\Parameter.cs" />
+    <Compile Include="ADO\SalaDbRepository.cs" />
+    <Compile Include="ADO\SQLDatabaseContext.cs" />
+    <Compile Include="Dominio\Cliente.cs" />
+    <Compile Include="Dominio\Componentes\Direccion.cs" />
+    <Compile Include="Dominio\Entidad.cs" />
+    <Compile Include="Dominio\Reserva.cs" />
+    <Compile Include="Dominio\Salas.cs" />
+    <Compile Include="Dominio\Sucursal.cs" />
+    <Compile Include="EF\VOfficeDbContext.cs" />
+    <Compile Include="DDDContext\ClienteRepositorio.cs" />
+    <Compile Include="DDDContext\IGenericRepository.cs" />
+    <Compile Include="DDDContext\IVirtualOfficeRepository.cs" />
+    <Compile Include="DDDContext\ReservaRepositorio.cs" />
+    <Compile Include="DDDContext\SalaRepositorio.cs" />
+    <Compile Include="DDDContext\SucursalRepositorio.cs" />
+    <Compile Include="DDDContext\EFVirtualOfficeRepository.cs" />
+    <Compile Include="Impl\IRepositorio.cs" />
+    <Compile Include="Impl\RepositorioBase.cs" />
+    <Compile Include="Impl\RepositorioCliente.cs" />
+    <Compile Include="Impl\ReservaRepositorio.cs" />
+    <Compile Include="Migrations\201509060131241_inicio.cs" />
+    <Compile Include="Migrations\201509060131241_inicio.Designer.cs">
+      <DependentUpon>201509060131241_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509122031597_clientes.cs" />
+    <Compile Include="Migrations\201509122031597_clientes.Designer.cs">
+      <DependentUpon>201509122031597_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509122309075_fixcliente.cs" />
+    <Compile Include="Migrations\201509122309075_fixcliente.Designer.cs">
+      <DependentUpon>201509122309075_fixcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509190242347_Sucursales.cs" />
+    <Compile Include="Migrations\201509190242347_Sucursales.Designer.cs">
+      <DependentUpon>201509190242347_Sucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509190316270_Salas.cs" />
+    <Compile Include="Migrations\201509190316270_Salas.Designer.cs">
+      <DependentUpon>201509190316270_Salas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509261219028_faltante.cs" />
+    <Compile Include="Migrations\201509261219028_faltante.Designer.cs">
+      <DependentUpon>201509261219028_faltante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509261223405_cambioDireccion.cs" />
+    <Compile Include="Migrations\201509261223405_cambioDireccion.Designer.cs">
+      <DependentUpon>201509261223405_cambioDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509261526381_ClientesV2.cs" />
+    <Compile Include="Migrations\201509261526381_ClientesV2.Designer.cs">
+      <DependentUpon>201509261526381_ClientesV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510030343125_NombreUsuario.cs" />
+    <Compile Include="Migrations\201510030343125_NombreUsuario.Designer.cs">
+      <DependentUpon>201510030343125_NombreUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510031646547_rutasalternas.cs" />
+    <Compile Include="Migrations\201510031646547_rutasalternas.Designer.cs">
+      <DependentUpon>201510031646547_rutasalternas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509060131241_inicio.resx">
+      <DependentUpon>201509060131241_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509122031597_clientes.resx">
+      <DependentUpon>201509122031597_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509122309075_fixcliente.resx">
+      <DependentUpon>201509122309075_fixcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509190242347_Sucursales.resx">
+      <DependentUpon>201509190242347_Sucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509190316270_Salas.resx">
+      <DependentUpon>201509190316270_Salas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509261219028_faltante.resx">
+      <DependentUpon>201509261219028_faltante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509261223405_cambioDireccion.resx">
+      <DependentUpon>201509261223405_cambioDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509261526381_ClientesV2.resx">
+      <DependentUpon>201509261526381_ClientesV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510030343125_NombreUsuario.resx">
+      <DependentUpon>201510030343125_NombreUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510031646547_rutasalternas.resx">
+      <DependentUpon>201510031646547_rutasalternas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

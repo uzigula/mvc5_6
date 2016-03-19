@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualOffice.Web", "VirtualOffice.Web\VirtualOffice.Web.csproj", "{0357A823-9608-406D-997D-DD6A8751ACC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualOffice.Servicios", "VirtualOffice.Servicios\VirtualOffice.Servicios.csproj", "{301C4251-89C6-4998-A6B2-41E869ED6B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualOffice.Repositorios", "VirtualOffice.Repositorios\VirtualOffice.Repositorios.csproj", "{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualOffice.Test", "VirtualOffice.Test\VirtualOffice.Test.csproj", "{BDB2C5D5-C89B-499D-B708-2952406D3F55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UAT|Any CPU = UAT|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.QA|Any CPU.Build.0 = QA|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{0357A823-9608-406D-997D-DD6A8751ACC5}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.QA|Any CPU.Build.0 = QA|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.UAT|Any CPU.ActiveCfg = UAT|Any CPU
+		{301C4251-89C6-4998-A6B2-41E869ED6B72}.UAT|Any CPU.Build.0 = UAT|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.QA|Any CPU.Build.0 = QA|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28FFE2C3-88BE-43AB-A36A-E074DE395D1C}.UAT|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB2C5D5-C89B-499D-B708-2952406D3F55}.UAT|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

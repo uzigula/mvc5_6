@@ -1,0 +1,67 @@
+﻿@model VirtualOffice.Web.Areas.Administrativa.Models.BuscaClientesViewModel
+<h2>Clientes</h2>
+<!-- forma 1 MVC Fashion-->
+@*@using (Html.BeginForm("Index", "Clientes",
+    new { area = "Administrativa" }, FormMethod.Get, new { @class = "form-inline" }))
+{
+    <div class="form-group col-sm-10">
+        <input type="text" placeholder="Buscar Clientes..."
+               name="Busqueda" class="form-control" value="@Model.Busqueda" />
+    </div>
+    <input type="submit" value="Buscar" class="btn btn-success" />
+}*@
+
+<!-- usando Ajax-->
+@using (Ajax.BeginForm("ConsultarClientes", "Clientes", new AjaxOptions
+{
+    HttpMethod = "Get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "ClientListContainer"
+}, new
+{
+    id = "ConsultarClientesForm",
+    @class = "form-horizontal"
+}))
+{
+    <div class="form-group col-sm-10">
+        <input type="text" placeholder="Buscar Clientes..."
+               name="Busqueda" class="form-control" value="@Model.Busqueda" />
+    </div>
+    <div class="col-sm-2">
+        <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+
+}
+
+
+<!-- forma 2 Otro Stylo-->
+@*<div class="container">
+        <h2>Buscar (forma 2)</h2>
+        <div class="form-inline">
+            <div class="form-group col-sm-10">
+                <input type="text" placeholder="Buscar Clientes..."
+                       name="Busqueda" class="form-control" />
+            </div>
+            @Html.ActionLink("Buscar", "Buscar", null, new { @class = "btn btn-success" })
+        </div>
+    </div>*@
+<!-- esto es usando postback-->
+@*@if (Model.Clientes.Any())
+{
+    @Html.Partial("_ListaClientes",@Model.Clientes)
+}*@
+
+<!-- Usando Ajax-->
+<div id="ClientListContainer">
+    @if (Model.Clientes.Any())
+        {
+            @Html.Partial("_ListaClientes",@Model.Clientes)
+        }
+</div>
+
+
+
+<div id="RenuevaModalFormContainer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="checkInFormLabel" aria-hidden="True"></div>
+@section Scripts {
+    @Scripts.Render("~/bundles/unobtrusive")
+}

@@ -1,0 +1,40 @@
+﻿@model VirtualOffice.Web.Areas.Administrativa.Models.RenuevaSuscripcionClienteViewModel
+@using (Ajax.BeginForm("RenovarSuscripcion", "Clientes",new AjaxOptions()
+{
+    HttpMethod = "Post",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "ClientListContainer"
+}, new
+{
+    id = "RenovarSuscripcionForm",
+    @class = "form-horizontal",
+    role = "form"
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=>m.ClienteId)
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="True">&times;</button>
+                <h4 class="modal-title" id="officeFormLabel">@Model.Titulo</h4>
+            </div>
+            <div class="modal-body">
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Duracion, new { @class = "col-lg-5 control-label" })
+                    <div class="col-lg-7">
+                        @Html.TextBoxFor(m => m.Duracion, new { @class = "form-control" })
+                    </div>
+                </div>
+
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    </div>
+}
+

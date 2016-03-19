@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@ViewBag.RutaCliente 
+<div class="jumbotron">
+    <h1>Virtual Office</h1>
+    <p> Pagina Publica principal </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Una seccion</h2>
+        <p>
+            Aqui podriamos poner informacion relevante para el Cliente
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Reservas", "Index","Reservas", new { usuario = @ViewBag.RutaCliente },null)</h2>
+        <p>Reservas ejecutarse en los proximos dias</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Cobranzas</h2>
+        <p>Deudas, mensajes</p>
+    </div>
+</div>
