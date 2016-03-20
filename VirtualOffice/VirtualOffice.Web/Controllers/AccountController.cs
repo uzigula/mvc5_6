@@ -15,44 +15,16 @@ namespace VirtualOffice.Web.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private ApplicationSignInManager _signInManager;
-        private ApplicationUserManager _userManager;
+        private ApplicationSignInManager SignInManager;
+        private ApplicationUserManager UserManager;
 
-        public AccountController()
-        {
-        }
-
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        private IAuthenticationManager AuthenticationManager;
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IAuthenticationManager authenticationManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            AuthenticationManager = authenticationManager;
         }
-
-        public ApplicationSignInManager SignInManager
-        {
-            get
-            {
-                return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
-            }
-            private set
-            {
-                _signInManager = value;
-            }
-        }
-
-        public ApplicationUserManager UserManager
-        {
-            get
-            {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set
-            {
-                _userManager = value;
-            }
-        }
-
-        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -431,16 +403,16 @@ namespace VirtualOffice.Web.Controllers
         {
             if (disposing)
             {
-                if (_userManager != null)
+                if (UserManager != null)
                 {
-                    _userManager.Dispose();
-                    _userManager = null;
+                    UserManager.Dispose();
+                    UserManager = null;
                 }
 
-                if (_signInManager != null)
+                if (SignInManager != null)
                 {
-                    _signInManager.Dispose();
-                    _signInManager = null;
+                    SignInManager.Dispose();
+                    SignInManager = null;
                 }
             }
 
@@ -451,13 +423,6 @@ namespace VirtualOffice.Web.Controllers
         // Se usa para la protección XSRF al agregar inicios de sesión externos
         private const string XsrfKey = "XsrfId";
 
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().Authentication;
-            }
-        }
 
         private void AddErrors(IdentityResult result)
         {

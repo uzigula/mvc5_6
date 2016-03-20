@@ -14,10 +14,6 @@ namespace VirtualOffice.Web
         // Para obtener más información para configurar la autenticación, visite http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
-            // Configure el contexto de base de datos, el administrador de usuarios y el administrador de inicios de sesión para usar una única instancia por solicitud
-            app.CreatePerOwinContext(ApplicationDbContext.Create);
-            app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
-            app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
             // Permitir que la aplicación use una cookie para almacenar información para el usuario que inicia sesión
             // y una cookie para almacenar temporalmente información sobre un usuario que inicia sesión con un proveedor de inicio de sesión de terceros
