@@ -1,0 +1,42 @@
+﻿@model YoVoy.Web.Models.InscripcionEditViewModel
+@using (Ajax.BeginForm("Inscripcion","Buscar",
+    new AjaxOptions
+    {
+        HttpMethod="Post",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "evento" + @Model.EventoId
+    },
+    new
+    {
+        id="IncripcionForm",
+        @class = "form-horizontal",
+        role="form"
+    }
+))
+{
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title">@Model.Titulo</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Nombre, new { @class = "col-lg-5 control-label" })
+                    <div class="col-lg-7">
+                        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Inscribirme</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+}

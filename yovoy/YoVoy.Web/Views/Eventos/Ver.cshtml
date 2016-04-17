@@ -1,0 +1,58 @@
+﻿@model YoVoy.Web.Models.EventoDetalleViewModel
+
+@{
+    ViewBag.Title = "Ver";
+}
+
+<h2>@Model.Titulo</h2>
+<hr />
+
+<div class="row">
+    <div class="col-sm-9">
+        @Html.Partial("_Evento", Model)
+    </div>
+    <div class="col-sm-3">
+        @Html.Partial("_Organizador", @Model.Organizador)
+
+        <h3>
+            <span class="label label-success">
+                @Ajax.ActionLink("Inscribete aquí", "Inscribirse", "Eventos",
+                    new { id = Model.EventoId, area = "" },
+                    new AjaxOptions
+                    {
+                        HttpMethod = "Get",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "InscripcionModalForm"
+                    },
+                    new
+                    {
+                        data_toggle = "modal",
+                        data_target = "#InscripcionModalForm"
+                    }
+            )
+            </span>
+        </h3>
+
+
+    </div>
+</div>
+
+<div class="col-sm-12">
+    @Html.Partial("_Asistentes", @Model.Asistentes)
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<div id="InscripcionModalForm"
+     class="modal fade"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="IncripcionFormLabel"
+     aria-hidden="true">
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/unobtrusiveajax")
+}

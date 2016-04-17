@@ -1,0 +1,69 @@
+﻿@model IEnumerable<YoVoy.Web.Models.ListaEventosViewModel>
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lugar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                <div class="btn-group">
+                    <button title="Acción" class="btn dropdown-toggle btn-xs" data-toggle="dropdown">
+                        <span><i class="glyphicon glyphicon-cog"></i><span class="caret"></span> </span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href=@Url.Action("Eliminar", "Eventos", new {  id = item.EventoId })><i class="glyphicon glyphicon-edit"></i>&nbsp;Eliminar</a>
+                        </li>
+                        <li>
+                            <a href=@Url.Action("Ver", "Eventos", new { id = item.EventoId })><i class="glyphicon glyphicon-eye-open"></i>&nbsp;Ver</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

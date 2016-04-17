@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  For more info on this file format visit http://docs.nuget.org/docs/reference/nuspec-reference.
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">  
+  <metadata>
+    <id>Acme.Ventas.Mensajeria.Email</id>
+    <version>1.2.1-alpha</version>
+    <authors>Cibertec Sabados</authors>
+    <description>
+      Libreria de ejemplo para creacion de un paquete nuget simple
+    </description>
+    <language>es-PE</language>
+    <projectUrl>http://ciberte.edu.pe/netdeveloper/</projectUrl>
+    <licenseUrl>http://ciberte.edu.pe/netdeveloper/licencia</licenseUrl>
+  </metadata>
+</package>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<YoVoy.Web.Models.ListaEventosViewModel>
+
+<div class="container">
+    <h3>Eventos Encontrados</h3>
+    <ul>
+        @foreach (var evento in Model)
+        {
+            <li>
+                <div class="well">
+                    <h2 class="span6">
+                        @Html.ActionLink(@evento.Titulo,
+                        "Ver",
+                        "Eventos", new { id = @evento.EventoId }, null)
+                    </h2>
+                    <span>@evento.Estado</span>
+                    <div class="row">
+                        <span><strong>Donde:</strong></span>
+                        <span>@evento.Lugar</span>
+                        <span class="badge">@evento.Fecha</span>
+                    </div>
+                    <div class="row">
+                        <span>@evento.Descripcion</span>
+                    </div>
+                    <div>
+                        @Ajax.ActionLink("Inscribirme","Inscribir","Buscar",
+                           new { eventoId= @evento.EventoId, eventoTitulo=@evento.Titulo },
+                           new AjaxOptions
+                           {
+                               HttpMethod= "Get",
+                               InsertionMode = InsertionMode.Replace,
+                               UpdateTargetId = "IncripcionFormContainer"
+                           },
+                           new
+                           {
+                               data_toggle = "modal",
+                               data_target = "#IncripcionFormContainer"
+                           }
+                       )
+                    </div>
+                    @Html.Raw("<div id=\"evento" + @evento.EventoId +"\"></div>")
+                </div>
+            </li>
+        }
+    </ul>
+</div>

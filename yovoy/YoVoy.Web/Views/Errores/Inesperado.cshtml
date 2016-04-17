@@ -1,0 +1,45 @@
+﻿@model YoVoy.Web.Models.ErrorViewModel
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <meta name="keywords" content="500 Error page" />
+    @Styles.Render("~/bundles/errores")
+</head>
+<body>
+    <!--start-wrap--->
+    <div class="wrap">
+        <!---start-header---->
+        <div class="header">
+            <div class="logo">
+                <h1><a href="#">@Model.Encabezado</a></h1>
+            </div>
+        </div>
+        <!---End-header---->
+        <!--start-content------>
+        <div class="content">
+            <div ><img src="~/Content/errorimages/500.jpg" title="error"/>
+            </div>
+            <br/>
+            <div>
+                <p>
+                    @Model.Encabezado<br />
+                    <strong>@Model.Mensaje</strong>
+                </p>
+            </div>
+            <a href=@Url.Action("Index","Home")>@Model.IrAlHome</a>
+        </div>
+        <!--End-Cotent------>
+    </div>
+    <!--End-wrap--->
+</body>
+</html>

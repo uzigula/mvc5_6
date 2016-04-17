@@ -1,0 +1,62 @@
+﻿@model YoVoy.Web.Models.BuscaEventosViewModel
+
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Buscar</h2>
+<!-- forma 1 MVC Fashion-->
+@*@using (Html.BeginForm("Buscar", "Buscar",
+        null, FormMethod.Post, new { @class = "form-inline" }))
+    {
+        <div class="form-group col-sm-10">
+            <input type="text" placeholder="Buscar Evento..."
+                   name="Busqueda" value=@Model.Busqueda class="form-control" />
+        </div>
+        <input type="submit" value="Buscar" class="btn btn-success" />
+    }*@
+
+<!-- usando MVC Ajax -->
+
+@using (Ajax.BeginForm("Buscar", "Buscar",
+                            new AjaxOptions
+                            {
+                                HttpMethod = "Get",
+                                InsertionMode = InsertionMode.Replace,
+                                UpdateTargetId = "ListaEventosEncontrados"
+                            },
+                            new
+                            {
+                                id = "BuscaEventosForm",
+                                @class = "form-inline"
+                            }
+                            ))
+{
+    <div class="form-group col-sm-10">
+        <input type="text" placeholder="Buscar Evento..."
+               name="Busqueda" value=@Model.Busqueda class="form-control" />
+    </div>
+    <input type="submit" value="Buscar" class="btn btn-success" />
+}
+
+
+
+
+<!-- muestra los resultados de la búsqueda-->
+<div id="ListaEventosEncontrados"></div>
+<!-- muesta un dialogo modal-->
+<div id="IncripcionFormContainer" 
+     class="modal fade" 
+     tabindex="-1" 
+     role="dialog"
+     aria-labelledby="inscripcionFormLabel"
+     aria-hidden="true">
+</div>
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/unobtrusiveajax")
+    @Scripts.Render("~/bundles/busqueda")
+}

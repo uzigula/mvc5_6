@@ -1,0 +1,116 @@
+﻿@model YoVoy.Web.Models.UsuarioEditModel
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+
+@using (Html.BeginForm("Editar", "Usuario", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>UsuarioEditModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CorreoElectronico, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CorreoElectronico, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CorreoElectronico, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InformacionAdicional, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.InformacionAdicional, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InformacionAdicional, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NombreCuenta, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NombreCuenta, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NombreCuenta, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AfiliadoEn, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AfiliadoEn, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AfiliadoEn, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- seccion de cascada de listas-->
+        <div id="usuario-ubigeo-dropdown">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Departamentos, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                <div class="col-md-5">
+                    @Html.HiddenFor(model => model.Departamento,
+                                new { @id = "departamento_nombre" , @class="departamento"})
+                    @Html.DropDownList("departamento", Model.Departamentos,
+                        new { @id = "usuario_departamento", @class = "form-control departamento" })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Provincias, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-5">
+                    @Html.HiddenFor(model => model.Provincia,
+                                new { @id = "provincia_nombre", @class="provincia" })
+                    @Html.DropDownList("provincia", Model.Provincias,
+                        new { @id = "usuario_provincia", @class = "form-control provincia" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Distrito, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-5">
+                    @Html.HiddenFor(model => model.Distrito,
+                                new { @id = "distrito_nombre", @class = "distrito" })
+                    @Html.DropDownList("distrito", Model.Distritos,
+                        new { @id = "usuario_distrito", @class = "form-control distrito" })
+                </div>
+            </div>
+        </div>
+        <!-- seccion de cascada de listas-->
+
+        <div class="form-group">
+            @Html.Label("Avatar", new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                <input type="file" id="Avatar" name="upload"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/usuario")
+}

@@ -1,0 +1,24 @@
+﻿@model YoVoy.Web.Models.OrganizadorEvento
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h4>Organizador</h4>
+    </div>
+    <div class="panel-body">
+        <div>
+            <strong>@Model.Nombre</strong>
+        </div>
+
+        <div>
+            <span><i class="glyphicon glyphicon-envelope"></i>&nbsp; @Html.DisplayFor(model => model.CorreoElectronico)</span>
+        </div>
+
+    </div>
+    <div class="panel-footer">
+        <div>
+            @Html.DisplayFor(model => model.InformacionAdicional)
+        </div>
+
+    </div>
+</div>
+
