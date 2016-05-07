@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TiendaMusica.Data.DominioDBFirst
+namespace TiendaMusica.DominioDBFirst
 {
     using System;
     using System.Collections.Generic;

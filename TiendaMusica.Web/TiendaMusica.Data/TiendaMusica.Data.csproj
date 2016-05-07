@@ -96,10 +96,14 @@
     <Compile Include="DominioDBFirst\Track.cs">
       <DependentUpon>ChinookDbFirst.tt</DependentUpon>
     </Compile>
+    <Compile Include="ChinookDominio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dominio\" />
+    <ProjectReference Include="..\TiendaMusica.Dominio\TiendaMusica.Dominio.csproj">
+      <Project>{61b680bd-8a90-4611-bb3b-f1d20002582b}</Project>
+      <Name>TiendaMusica.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DominioDBFirst\ChinookDbFirst.edmx">
