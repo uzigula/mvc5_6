@@ -2,12 +2,14 @@ namespace TiendaMusica.Data
 {
     using Dominio;
     using System.Data.Entity;
-
+    using System.Data.Entity.ModelConfiguration.Conventions;
     public partial class ChinookDominio : DbContext
     {
         public ChinookDominio()
             : base("name=ChinookDominio")
         {
+
+            var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
         public virtual DbSet<Album> Album { get; set; }
@@ -23,6 +25,7 @@ namespace TiendaMusica.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Artist>()
                 .HasMany(e => e.Album)
                 .WithRequired(e => e.Artist)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace TiendaMusica.Web
@@ -12,6 +8,13 @@ namespace TiendaMusica.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+
+            routes.MapRoute(
+                name:"Artista",
+                url: "{artista}/{action}",
+                defaults: new { controller="Artistas", action="Perfil"}
+                );
 
             routes.MapRoute(
                 name: "Default",
