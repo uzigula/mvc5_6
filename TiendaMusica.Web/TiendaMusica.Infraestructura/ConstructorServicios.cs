@@ -1,5 +1,6 @@
 ﻿using TiendaMusica.Logica;
 using TiendaMusica.Data.Repositorio;
+using TiendaMusica.Data.InsightDB;
 
 namespace TiendaMusica.Infraestructura
 {
@@ -7,7 +8,9 @@ namespace TiendaMusica.Infraestructura
     {
         public static TiendaConsultas TiendaConsultas()
         {
-            return new TiendaConsultas(new EFTiendaMusicaRepository());
+            // return new TiendaConsultas(new EFTiendaMusicaRepository());
+
+            return new TiendaConsultas(new TiendaMusicaDB("ChinookDominio"));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
@@ -61,6 +62,12 @@ namespace TiendaMusica.Data.EF
             if (_contexto.Entry(entity).State == EntityState.Detached)
                 _contexto.Set<TEntidad>().Attach(entity);
             _contexto.Entry(entity).State = EntityState.Modified;
+        }
+
+        [Obsolete("Solo disponible para Insight Database Provider")]
+        public IEnumerable<TEntidad> ConsultaAdHoc(string query, object parameters)
+        {
+            throw new NotImplementedException();
         }
     }
 }

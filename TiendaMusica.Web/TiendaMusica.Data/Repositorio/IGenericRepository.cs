@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -15,6 +16,10 @@ namespace TiendaMusica.Data.Repositorio
         void Add(TEntidad entity);
         void Delete(TEntidad entity);
         void Update(TEntidad entity);
+
+        //metodo para Insight Database
+        IEnumerable<TEntidad> ConsultaAdHoc(string query, object parameters);
+
     }
 
     

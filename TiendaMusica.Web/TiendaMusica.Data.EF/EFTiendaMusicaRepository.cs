@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using TiendaMusica.Data.EF.RepositoriosEntidades;
@@ -178,6 +179,11 @@ namespace TiendaMusica.Data.Repositorio
         public void Commit()
         {
             this.SaveChanges();
+        }
+
+        public IEnumerable<TResult> ConsultaAdHoc<TResult>(string query, object parameters)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

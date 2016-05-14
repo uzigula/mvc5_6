@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TiendaMusica.Dominio;
 
 namespace TiendaMusica.Data.Repositorio
@@ -21,5 +22,9 @@ namespace TiendaMusica.Data.Repositorio
 
 
         void Commit();
+
+        // consulta generica
+
+        IEnumerable<TResult> ConsultaAdHoc<TResult>(string query, object parameters);
     }
 }
