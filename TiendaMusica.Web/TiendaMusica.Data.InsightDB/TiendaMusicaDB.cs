@@ -120,7 +120,12 @@ namespace TiendaMusica.Data.InsightDB
 
         public IEnumerable<TResult> ConsultaAdHoc<TResult>(string query, object parameters)
         {
-            return db.Query<TResult>(query, parameters);
+            return db.QuerySql<TResult>(query, parameters);
+        }
+
+        public IEnumerable<TResult> ConsultaPorStoredProc<TResult>(string storedProcName, object parameters)
+        {
+            return db.Query<TResult>(storedProcName, parameters);
         }
     }
 }

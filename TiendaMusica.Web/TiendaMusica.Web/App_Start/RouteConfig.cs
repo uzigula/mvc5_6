@@ -12,7 +12,7 @@ namespace TiendaMusica.Web
 
             routes.MapRoute(
                 name:"Artista",
-                url: "{artista}/{action}",
+                url: "tienda/{artista}/{action}",
                 defaults: new { controller="Artistas", action="Perfil"}
                 );
 

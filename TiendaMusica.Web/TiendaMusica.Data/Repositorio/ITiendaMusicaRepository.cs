@@ -26,5 +26,6 @@ namespace TiendaMusica.Data.Repositorio
         // consulta generica
 
         IEnumerable<TResult> ConsultaAdHoc<TResult>(string query, object parameters);
+        //IEnumerable<TResult> ConsultaPorStoredProc<TResult>(string storedProcName, object parameters);
     }
 }

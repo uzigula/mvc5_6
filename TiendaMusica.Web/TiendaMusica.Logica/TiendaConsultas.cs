@@ -32,7 +32,7 @@ namespace TiendaMusica.Logica
                 .ConsultaAdHoc<AlbumsPorArtistaViewModel>
                         (
                         "Select a.Title Album, b.Name Artista from dbo.Album a inner join dbo.Artist b on a.ArtistId=b.ArtistId where b.Name = @Name", 
-                        new { Name = nombre }
+                        new { Name = nombreConvertido }
                         );
 
 
