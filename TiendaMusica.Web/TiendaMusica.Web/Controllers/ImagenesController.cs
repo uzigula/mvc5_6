@@ -17,5 +17,13 @@ namespace TiendaMusica.Web.Controllers
             var path = Path.Combine(Server.MapPath("~/imagenes/Albums"),id+$".{ext}");
             return new FileStreamResult(new FileStream(path, FileMode.Open), MimeMapping.GetMimeMapping($"{id}.{ext}"));
         }
+
+        [AcceptVerbs(HttpVerbs.Get)]
+        [OutputCache(CacheProfile = "AlbumImages")]
+        public FileResult NoCover()
+        {
+            var path = Path.Combine(Server.MapPath("~/imagenes"), "nocover.png");
+            return new FileStreamResult(new FileStream(path, FileMode.Open), MimeMapping.GetMimeMapping("nocover.png"));
+        }
     }
 }

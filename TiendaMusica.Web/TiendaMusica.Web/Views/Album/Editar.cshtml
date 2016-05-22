@@ -25,7 +25,11 @@
                     @Html.ValidationMessageFor(model => model.Caratula, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-md-4">
-                    <img src="@Url.Action("Show","Imagenes", new { id = Model.Caratula , ext=Model.CaratulaExtension})"/>
+                    @if (string.IsNullOrEmpty(Model.Caratula))
+                    { <img src="@Url.Action("NoCover","Imagenes")" />}
+                    else
+                    { <img src="@Url.Action("Show","Imagenes", new { id = Model.Caratula , ext=Model.CaratulaExtension})" />}
+                    
                 </div>
             </div>
         </div>
