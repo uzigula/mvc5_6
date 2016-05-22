@@ -9,7 +9,11 @@ namespace TiendaMusica.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-
+            routes.MapRoute(
+               name: "Albums",
+               url: "admin/{artista}/{album}/{action}",
+               defaults: new { controller = "Album", action = "index" }
+               );
             routes.MapRoute(
                 name:"Artista",
                 url: "tienda/{artista}/{action}",

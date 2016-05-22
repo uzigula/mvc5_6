@@ -8,9 +8,11 @@ namespace TiendaMusica.Infraestructura
     {
         public static TiendaConsultas TiendaConsultas()
         {
-            // return new TiendaConsultas(new EFTiendaMusicaRepository());
+            return new TiendaConsultas(new EFTiendaMusicaRepository());
 
-            return new TiendaConsultas(new TiendaMusicaDB("ChinookDominio"));
+            //return new TiendaConsultas(new TiendaMusicaDB("ChinookDominio"));
         }
+
+        
     }
 }

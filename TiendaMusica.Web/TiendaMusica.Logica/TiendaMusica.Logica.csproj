@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,10 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comun\Extensiones.cs" />
+    <Compile Include="Comun\Imagen.cs" />
     <Compile Include="Comun\Utilidades.cs" />
+    <Compile Include="Excepciones\NotDataFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporteSimple.cs" />
     <Compile Include="TiendaConsultas.cs" />
+    <Compile Include="ViewModels\AlbumEditViewModel.cs" />
     <Compile Include="ViewModels\AlbumsPorArtistaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -20,5 +20,7 @@ namespace TiendaMusica.Dominio
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Track> Track { get; set; }
+        public string Thumbnail { get; set; }
+        public string ThumbnailExtension { get; set; }
     }
 }
