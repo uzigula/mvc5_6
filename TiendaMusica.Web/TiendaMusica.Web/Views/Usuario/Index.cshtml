@@ -1,0 +1,76 @@
+﻿@model TiendaMusica.Web.Models.UsuarioEditViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm("Grabar","Usuario",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>UsuarioEditViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--Seccion de los combos en cascada-->
+        <div id="usuario-ubigeo">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Departamento, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("departamento", Model.Departamentos,
+                   new { @id = "usuario_departamento", @class = "form-control departamento" })
+
+                    @Html.HiddenFor(model => model.Departamento, new { @class="departamento"})
+                    @Html.ValidationMessageFor(model => model.Departamento, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Provincia, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("provincia", Model.Provincias,
+                   new { @id = "usuario_provincia", @class = "form-control provincia" })
+                    @Html.HiddenFor(model => model.Provincia, new { @class = "provincia" })
+                    @Html.ValidationMessageFor(model => model.Provincia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Distrito, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("distrito", Model.Distritos,
+                    new { @id = "usuario_distrito", @class = "form-control distrito" })
+                    @Html.HiddenFor(model => model.Distrito, new { @class = "distrito" })
+                    @Html.ValidationMessageFor(model => model.Distrito, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modUsuario")
+}
