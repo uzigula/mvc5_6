@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="7c6650ac-d2b7-4c8c-aac1-0e7b7f651c00" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.7822672c-6d6a-4e72-bc5c-22a70ca71f76.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="b1eebde0-8062-410b-8666-a15897285334" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" RecordedValue="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="es-PE" RecordedValue="es-PE" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3a8d518a-f47c-4a93-abbd-a4ccc9bf79bc" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" RecordedValue="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="es-PE" RecordedValue="es-PE" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="bc60feba-0ae9-4d8a-a629-a0f0a2f449f8" Version="1.1" Url="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/editar" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extraer campos ocultos" Description="Extraer todos los campos ocultos de la respuesta y colocarlos en el contexto de la prueba.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="c0feb667-3ef6-4eb2-bbae-d2ca734f315b" Version="1.1" Url="http://localhost:2156/66059c9b0a944136b14e9347b6d25241/browserLinkSignalR/negotiate" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="Referer" Value="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/editar" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="requestUrl" Value="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" RecordedValue="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="browserName" Value="Internet+Explorer" RecordedValue="Internet+Explorer" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="userAgent" Value="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" RecordedValue="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.3" RecordedValue="1.3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="_" Value="1466286383120" RecordedValue="1466286383120" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody />
+    </Request>
+    <Request Method="GET" Guid="e415523c-789b-48af-ad07-b28fc0a30ee9" Version="1.1" Url="http://localhost:2156/66059c9b0a944136b14e9347b6d25241/browserLinkSignalR/connect" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="webSockets" RecordedValue="webSockets" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAAdWERdXR9qEiTyCY%2FbCDY7QAAAAACAAAAAAAQZgAAAAEAACAAAADeku2s96gawXBy9V5eCzjUoRDzeA8AUAZ%2FCyiXr%2BK5ugAAAAAOgAAAAAIAACAAAAA5mKV2J3MWyo7iWAM52Laj5dTMEMjLK2CP5gAgElNsFzAAAAB47aXj4kJmmx%2B3DnrSE%2BdlP2DC5pm6fp25E%2FgKO%2Bb5H8A1ehWB13pAsmjYOZbb3bpAAAAAhE6rDNSoN6NSRUxdeDJCsnUp9wds5wgI%2BOrby2GgKzQeJ1KZL%2FlHaUiKYFQxM3FdYHZRFndH8oV3kwsw5%2BY9%2FQ%3D%3D" RecordedValue="AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAAdWERdXR9qEiTyCY%2FbCDY7QAAAAACAAAAAAAQZgAAAAEAACAAAADeku2s96gawXBy9V5eCzjUoRDzeA8AUAZ%2FCyiXr%2BK5ugAAAAAOgAAAAAIAACAAAAA5mKV2J3MWyo7iWAM52Laj5dTMEMjLK2CP5gAgElNsFzAAAAB47aXj4kJmmx%2B3DnrSE%2BdlP2DC5pm6fp25E%2FgKO%2Bb5H8A1ehWB13pAsmjYOZbb3bpAAAAAhE6rDNSoN6NSRUxdeDJCsnUp9wds5wgI%2BOrby2GgKzQeJ1KZL%2FlHaUiKYFQxM3FdYHZRFndH8oV3kwsw5%2BY9%2FQ%3D%3D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="requestUrl" Value="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" RecordedValue="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="browserName" Value="Internet+Explorer" RecordedValue="Internet+Explorer" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="userAgent" Value="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" RecordedValue="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="tid" Value="9" RecordedValue="9" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="2155d63a-073b-4c9e-8c9e-5bf30617b164" Version="1.1" Url="http://localhost:1703/__browserLink/requestData/8aae0bbe23374900901eb3b8a1ecd128" ThinkTime="18" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/editar" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="version" Value="2" RecordedValue="2" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="e7a857b4-feec-48d6-a2f4-17f550e8d6f0" Version="1.1" Url="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/Editar" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/editar" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="nq4ztl6ENvHlLiyY_BAEHBSFedtsX34TJbTykKdvPY4gfjM02T5VPzt9id5k2lYWwaMveVVnWpyyzu_BMFclsy7xZfPqW5oJIOPRdRtLLYA1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AlbumId" Value="{{$HIDDEN1.AlbumId}}" RecordedValue="4" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Caratula" Value="{{$HIDDEN1.Caratula}}" RecordedValue="1221606060241221681151822421310412724520142" CorrelationBinding="" UrlEncode="True" />
+        <FileUploadParameter Name="image" FileName="" ContentType="application/octet-stream" GenerateUniqueName="True" UseGuids="False" FileUploadName="" HtmlEncodeFileName="True" />
+        <FormPostParameter Name="Titulo" Value="Nuevo Album" RecordedValue="Nuevo Album" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="2831d8ba-952a-4397-80d7-91528a9f5c87" Version="1.1" Url="http://localhost:1703/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/editar" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="dc305bdb-3011-41b7-b2a6-29fa3de6ac69" Version="1.1" Url="http://localhost:2156/66059c9b0a944136b14e9347b6d25241/browserLinkSignalR/abort" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="Referer" Value="http://localhost:1703/admin/AC-DC/Let%20There%20Be%20Rock/editar" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="webSockets" RecordedValue="webSockets" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAAdWERdXR9qEiTyCY%2FbCDY7QAAAAACAAAAAAAQZgAAAAEAACAAAADeku2s96gawXBy9V5eCzjUoRDzeA8AUAZ%2FCyiXr%2BK5ugAAAAAOgAAAAAIAACAAAAA5mKV2J3MWyo7iWAM52Laj5dTMEMjLK2CP5gAgElNsFzAAAAB47aXj4kJmmx%2B3DnrSE%2BdlP2DC5pm6fp25E%2FgKO%2Bb5H8A1ehWB13pAsmjYOZbb3bpAAAAAhE6rDNSoN6NSRUxdeDJCsnUp9wds5wgI%2BOrby2GgKzQeJ1KZL%2FlHaUiKYFQxM3FdYHZRFndH8oV3kwsw5%2BY9%2FQ%3D%3D" RecordedValue="AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAAdWERdXR9qEiTyCY%2FbCDY7QAAAAACAAAAAAAQZgAAAAEAACAAAADeku2s96gawXBy9V5eCzjUoRDzeA8AUAZ%2FCyiXr%2BK5ugAAAAAOgAAAAAIAACAAAAA5mKV2J3MWyo7iWAM52Laj5dTMEMjLK2CP5gAgElNsFzAAAAB47aXj4kJmmx%2B3DnrSE%2BdlP2DC5pm6fp25E%2FgKO%2Bb5H8A1ehWB13pAsmjYOZbb3bpAAAAAhE6rDNSoN6NSRUxdeDJCsnUp9wds5wgI%2BOrby2GgKzQeJ1KZL%2FlHaUiKYFQxM3FdYHZRFndH8oV3kwsw5%2BY9%2FQ%3D%3D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="requestUrl" Value="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" RecordedValue="http%3A%2F%2Flocalhost%3A1703%2Fadmin%2FAC-DC%2FLet%2520There%2520Be%2520Rock%2Feditar" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="browserName" Value="Internet+Explorer" RecordedValue="Internet+Explorer" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="userAgent" Value="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" RecordedValue="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody />
+    </Request>
+    <Request Method="POST" Guid="6b5f33f2-203c-49b9-b184-1a9ac34bc033" Version="1.1" Url="http://localhost:2156/66059c9b0a944136b14e9347b6d25241/browserLinkSignalR/negotiate" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="Referer" Value="http://localhost:1703/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="requestUrl" Value="http%3A%2F%2Flocalhost%3A1703%2F" RecordedValue="http%3A%2F%2Flocalhost%3A1703%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="browserName" Value="Internet+Explorer" RecordedValue="Internet+Explorer" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="userAgent" Value="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" RecordedValue="Mozilla%2F5.0+(Windows+NT+6.3%3B+WOW64%3B+Trident%2F7.0%3B+.NET4.0E%3B+.NET4.0C%3B+.NET+CLR+3.5.30729%3B+.NET+CLR+2.0.50727%3B+.NET+CLR+3.0.30729%3B+rv%3A11.0)+like+Gecko" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.3" RecordedValue="1.3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="_" Value="1466286400978" RecordedValue="1466286400978" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody />
+    </Request>
+    <Request Method="GET" Guid="df881ded-2dfb-485c-b89a-12dd18952758" Version="1.1" Url="http://localhost:1703/__browserLink/requestData/a813c1ab6fd94af98ca6675c58db0ff0" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:1703/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="version" Value="2" RecordedValue="2" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Dirección URL de respuesta" Description="Comprueba que la dirección URL de respuesta tras el seguimiento de las redirecciones es la misma que la dirección URL de respuesta registrada. Se omiten los parámetros de QueryString." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Objetivo de tiempo de respuesta" Description="Valida que el tiempo de respuesta de la solicitud sea menor o igual que el objetivo de tiempo de respuesta especificado en la solicitud. Se pasarán por alto los objetivos de tiempo de respuesta que sean cero." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>
